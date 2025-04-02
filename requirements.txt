@@ -1,0 +1,6 @@
+openai-whisper
+numpy
+torch
+soundfile
+gTTS
+argparse>=1.4.0 
