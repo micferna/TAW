@@ -26,7 +26,7 @@ Application web de transcription audio utilisant le modèle OpenAI Whisper pour 
 
 1. **Cloner le dépôt**
 ```bash
-git clone [URL_DU_REPO]
+git clone https://github.com/micferna/TAW.git
 cd whisper-transcription-app
 ```
 

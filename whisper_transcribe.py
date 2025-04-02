@@ -452,13 +452,13 @@ def main():
         log_message(f"Version Python: {sys.version}")
         log_message(f"Arguments sys.argv: {sys.argv}")
         
-        parser = argparse.ArgumentParser(description="Transcription audio avec Whisper")
-        parser.add_argument("audio_file", help="Chemin vers le fichier audio à transcrire")
-        parser.add_argument("--generate-srt", action="store_true", help="Générer des sous-titres SRT")
+    parser = argparse.ArgumentParser(description="Transcription audio avec Whisper")
+    parser.add_argument("audio_file", help="Chemin vers le fichier audio à transcrire")
+    parser.add_argument("--generate-srt", action="store_true", help="Générer des sous-titres SRT")
         parser.add_argument("--model", choices=["tiny", "base", "small", "medium", "large"], default="medium", 
                           help="Modèle Whisper à utiliser (défaut: medium)")
-        args = parser.parse_args()
-        
+    args = parser.parse_args()
+
         log_message(f"Arguments reçus: {args}")
         
         # Normaliser le chemin du fichier
@@ -513,7 +513,7 @@ def main():
                 # Si le modèle demandé n'est pas 'base', on essaie avec 'base' comme fallback
                 log_message(f"Tentative avec le modèle 'base' comme alternative...")
                 try:
-                    model = whisper.load_model("base", device="cpu")
+        model = whisper.load_model("base", device="cpu")
                     log_message("Modèle 'base' chargé avec succès")
                 except Exception as e2:
                     log_message(f"Erreur lors du chargement du modèle 'base': {e2}")
